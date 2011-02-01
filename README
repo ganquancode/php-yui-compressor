@@ -1,57 +1,57 @@
 /*
  * PHP YUICompressor Class (Dual licensed under the MIT)
- * ·çÒ÷ (http://fengyin.name/guestbook.php)
+ * é£ŽåŸ (http://fengyin.name/guestbook.php)
  * DEMO http://sweet.fengyin.name/ (yui online compressor)
  ----------------------------------------------------------
- ÒªÇó: dk 1.4+  php exec() 
- ×÷ÓÃ: Ê¹ÓÃ yuicompressor ÅúÁ¿Ñ¹ËõÒ»¸öÄ¿Â¼µÄ js »òÕß css ÎÄ¼þ.Ò²¿ÉÒÔ¶Ôµ¥¸öÎÄ¼þ½øÐÐÑ¹Ëõ
+ è¦æ±‚: dk 1.4+  php exec() 
+ ä½œç”¨: ä½¿ç”¨ yuicompressor æ‰¹é‡åŽ‹ç¼©ä¸€ä¸ªç›®å½•çš„ js æˆ–è€… css æ–‡ä»¶.ä¹Ÿå¯ä»¥å¯¹å•ä¸ªæ–‡ä»¶è¿›è¡ŒåŽ‹ç¼©
  ----------------------------------------------------------
  
- //Windows µ÷ÓÃ·½Ê½:
+ //Windows è°ƒç”¨æ–¹å¼:
  
 
   $yui = new yuicompressor(array(
- 'java_home'=>'java', //»ò×Ô¼ºÖ¸¶¨ jdk °²×°µÄ bin Ä¿Â¼ (¾ø¶ÔÂ·¾¶)
+ 'java_home'=>'java', //æˆ–è‡ªå·±æŒ‡å®š jdk å®‰è£…çš„ bin ç›®å½• (ç»å¯¹è·¯å¾„)
  'jar_file'=>'D:\www\htdocs\yuicompressor.jar', 
- 'save_path'=>'D:\www\htdocs\results\\', //±ØÐëÓÐ¿ÉÐ´È¨ÏÞ
- // -------- È«¾ÖÉèÖÃ --------- //
- 'charset'=>'utf-8', //ÎÄ¼þµÄ±àÂë
- 'line-break'=>false, //ÔÚÖ¸¶¨µÄÁÐºó²åÈëÒ»¸ö line-bread ·ûºÅ
- // -------- javascript ´úÂëµÄÅäÖÃÑ¡Ïî --------- //
- 'nomunge'=>false,  //Ö»ÊÇ¼òµ¥Ñ¹Ëõ£¬Çå³ý¿ÕÐÐ¿Õ¸ñ×¢ÊÍµÈ¡£
- 'semi'=>false, //±£ÁôËùÓÐµÄ·ÖºÅ
- 'optimizations'=>false, //½ûÖ¹ÓÅ»¯´úÂë.
+ 'save_path'=>'D:\www\htdocs\results\\', //å¿…é¡»æœ‰å¯å†™æƒé™
+ // -------- å…¨å±€è®¾ç½® --------- //
+ 'charset'=>'utf-8', //æ–‡ä»¶çš„ç¼–ç 
+ 'line-break'=>false, //åœ¨æŒ‡å®šçš„åˆ—åŽæ’å…¥ä¸€ä¸ª line-bread ç¬¦å·
+ // -------- javascript ä»£ç çš„é…ç½®é€‰é¡¹ --------- //
+ 'nomunge'=>false,  //åªæ˜¯ç®€å•åŽ‹ç¼©ï¼Œæ¸…é™¤ç©ºè¡Œç©ºæ ¼æ³¨é‡Šç­‰ã€‚
+ 'semi'=>false, //ä¿ç•™æ‰€æœ‰çš„åˆ†å·
+ 'optimizations'=>false, //ç¦æ­¢ä¼˜åŒ–ä»£ç .
  ));
  
- //¶Ôµ¥¸öÎÄ¼þÑ¹Ëõ
+ //å¯¹å•ä¸ªæ–‡ä»¶åŽ‹ç¼©
  $resutlt = $yui->compress('D:\www\htdocs\swfobject_src.js');
  print_r ($resutlt);
  
- //¶ÔÄ¿Â¼ÎÄ¼þÑ¹Ëõ
+ //å¯¹ç›®å½•æ–‡ä»¶åŽ‹ç¼©
  $resutlt = $yui->directory('D:\www\htdocs\\');
  print_r($resutlt);
  
  ----------------------------------------------------------
  
- //Linux  µ÷ÓÃ·½Ê½:
+ //Linux  è°ƒç”¨æ–¹å¼:
  
  $yui = new yuicompressor(array(
- 'java_home'=>'java', //»ò×Ô¼ºÖ¸¶¨ jdk °²×°µÄ bin Ä¿Â¼ (¾ø¶ÔÂ·¾¶)
+ 'java_home'=>'java', //æˆ–è‡ªå·±æŒ‡å®š jdk å®‰è£…çš„ bin ç›®å½• (ç»å¯¹è·¯å¾„)
  'jar_file'=>'/home/admin/yuicompressor-2.4.2.jar', 
- 'save_path'=>'/home/admin/results/', //±ØÐëÓÐ¿ÉÐ´È¨ÏÞ
- // -------- È«¾ÖÉèÖÃ --------- //
- 'charset'=>'utf-8', //ÎÄ¼þµÄ±àÂë
- 'line-break'=>false, //ÔÚÖ¸¶¨µÄÁÐºó²åÈëÒ»¸ö line-bread ·ûºÅ
- // -------- javascript ´úÂëµÄÅäÖÃÑ¡Ïî --------- //
- 'nomunge'=>false,  //Ö»ÊÇ¼òµ¥Ñ¹Ëõ£¬Çå³ý¿ÕÐÐ¿Õ¸ñ×¢ÊÍµÈ¡£
- 'semi'=>false, //±£ÁôËùÓÐµÄ·ÖºÅ
- 'optimizations'=>false, //½ûÖ¹ÓÅ»¯´úÂë.
+ 'save_path'=>'/home/admin/results/', //å¿…é¡»æœ‰å¯å†™æƒé™
+ // -------- å…¨å±€è®¾ç½® --------- //
+ 'charset'=>'utf-8', //æ–‡ä»¶çš„ç¼–ç 
+ 'line-break'=>false, //åœ¨æŒ‡å®šçš„åˆ—åŽæ’å…¥ä¸€ä¸ª line-bread ç¬¦å·
+ // -------- javascript ä»£ç çš„é…ç½®é€‰é¡¹ --------- //
+ 'nomunge'=>false,  //åªæ˜¯ç®€å•åŽ‹ç¼©ï¼Œæ¸…é™¤ç©ºè¡Œç©ºæ ¼æ³¨é‡Šç­‰ã€‚
+ 'semi'=>false, //ä¿ç•™æ‰€æœ‰çš„åˆ†å·
+ 'optimizations'=>false, //ç¦æ­¢ä¼˜åŒ–ä»£ç .
  ));
  
- //¶Ôµ¥¸öÎÄ¼þÑ¹Ëõ
+ //å¯¹å•ä¸ªæ–‡ä»¶åŽ‹ç¼©
  $resutlt = $yui->compress('/home/admin/style.css');
  print_r ($resutlt);
  
- //¶ÔÄ¿Â¼ÎÄ¼þÑ¹Ëõ
+ //å¯¹ç›®å½•æ–‡ä»¶åŽ‹ç¼©
  $resutlt = $yui->directory('/home/admin/');
  print_r($resutlt);
